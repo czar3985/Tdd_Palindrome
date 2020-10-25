@@ -1,12 +1,14 @@
-﻿using System;
-
-namespace Tdd_Palindrome
+﻿namespace Tdd_Palindrome
 {
     public class PalindromeChecker
     {
-        public bool IsPalindrome(char v)
+        public bool IsPalindrome(string word)
         {
-            throw new NotImplementedException();
+            if (word.Length == 1)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
