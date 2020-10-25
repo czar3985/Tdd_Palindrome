@@ -8,7 +8,8 @@ namespace Tdd_Palindrome.Tests
         [Theory]
         [InlineData("a")]
         [InlineData("")]
-        public void Given_one_character_or_empty_string_then_palindrome(string word)
+        [InlineData("aa")]
+        public void Given_a_palindrome_then_IsPalindrome_returns_true(string word)
         {
             var sut = new PalindromeChecker();
             var result = sut.IsPalindrome(word);
