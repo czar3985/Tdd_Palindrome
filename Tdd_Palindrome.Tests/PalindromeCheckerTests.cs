@@ -15,5 +15,14 @@ namespace Tdd_Palindrome.Tests
             var result = sut.IsPalindrome(word);
             result.Should().BeTrue();
         }
+
+        [Theory]
+        [InlineData("ab")]
+        public void Given_a_nonpalindrome_then_IsPalindrome_returns_false(string word)
+        {
+            var sut = new PalindromeChecker();
+            var result = sut.IsPalindrome(word);
+            result.Should().BeFalse();
+        }
     }
 }
