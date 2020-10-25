@@ -3,18 +3,20 @@
     public class PalindromeChecker
     {
         public bool IsPalindrome(string word)
-        {
-            if ((word.Length == 0) || (word.Length == 1))
+        {           
+            for (var index = 0; index < word.Length/2; index++)
             {
-                return true;
-            }
-            
-            if (word.Length == 2 && word[0] == word[1])
-            {
-                return true;
+                if (word[index] == word[word.Length - 1 - index])
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
             }
 
-            return false;
+            return true;
         }
     }
 }
