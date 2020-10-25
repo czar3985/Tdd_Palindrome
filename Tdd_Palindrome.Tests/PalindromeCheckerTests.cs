@@ -9,6 +9,7 @@ namespace Tdd_Palindrome.Tests
         [InlineData("a")]
         [InlineData("")]
         [InlineData("aa")]
+        [InlineData("aba")]
         public void Given_a_palindrome_then_IsPalindrome_returns_true(string word)
         {
             var sut = new PalindromeChecker();
