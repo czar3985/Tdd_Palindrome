@@ -8,6 +8,12 @@
             {
                 return true;
             }
+            
+            if (word.Length == 2 && word[0] == word[1])
+            {
+                return true;
+            }
+
             return false;
         }
     }
